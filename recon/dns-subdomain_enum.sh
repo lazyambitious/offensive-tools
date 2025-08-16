@@ -10,7 +10,7 @@
 RESOLVER="$1"
 SUBFILE="$2"
 OUTDIR="dns_results_$(date +%Y%m%d_%H%M%S)"
-RECORD_TYPES=("A" "AAAA" "MX" "NS" "TXT" "CNAME" "SOA")
+RECORD_TYPES=("A" "AAAA" "MX" "NS" "TXT" "CNAME" "SOA" "SRV")
 
 # ───── Input Validation ─────
 if [[ -z "$RESOLVER" || -z "$SUBFILE" ]]; then
