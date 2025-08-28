@@ -15,10 +15,38 @@ chmod +x bootstrap.sh
 cd ILF_ADlab
 ```
 
-## 3. Load Convenience Environment Variables
+## 3. Load Environment
+
+Each engagement skeleton comes with a <.env> file containing **placeholder values**:
+
 ```
+DOMAIN=example.local
+DC_IP=192.0.2.10
+SUBNET=192.0.2.0/24
+USER=operator
+PASS='ChangeMe!'
+```
+
+👉 Edit `.env` to reflect the values you discover (e.g., actual domain name, DC IP, creds).  
+
+Then load it into your environment:
+
+```bash
 set -a; source .env; set +a
 ```
+
+After this, variables are available everywhere:
+
+```
+echo $DOMAIN
+ping -c1 $DC_IP
+ops/scripts/nmap_smart.sh "$SUBNET"
+ops/scripts/cme_smart.sh smb "$SUBNET" -u "$USER" -p "$PASS" --shares
+```
+
+**Note:** You can update `.env` anytime (e.g., when you crack new creds).  
+Just re-run the `set -a; source .env; set +a` command to refresh your shell environment.
+
 
 ## 4. Example Scans with Smart Logging
 ```
