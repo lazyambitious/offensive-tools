@@ -26,9 +26,9 @@ DIRS=(
   "creds/hashes"
   "creds/cracked"
   "creds/keys"
-  "loot/files"
-  "loot/sysvol"
-  "loot/dumps"
+  "data/files"
+  "data/sysvol"
+  "data/dumps"
   "ops/bins"
   "ops/scripts"
   "ops/shell"
@@ -192,7 +192,7 @@ EOF
 cat > .gitignore <<'EOF'
 # Avoid committing sensitive artifacts
 creds/
-loot/
+data/
 rpt/screenshots/
 enum/**/*.pcap
 *.kirbi
