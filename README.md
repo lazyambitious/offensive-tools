@@ -46,9 +46,9 @@ workflow, you build both engineering skill and operational intuition.
 
 ### Recon & Enumeration
 
--   [**DNSweep**](dnsweep/README.md) --- subdomain + DNS record
+-   [**DNSweep**](recon/dnsweep/README.md) --- subdomain + DNS record
     enumeration with optional AXFR checks.\
--   [**Sniffle**](sniffle/README.md) --- passive network listener for
+-   [**Sniffle**](recon/sniffle/README.md) --- passive network listener for
     broadcast, DNS, and AD signals.
 
 ### (More coming...)
